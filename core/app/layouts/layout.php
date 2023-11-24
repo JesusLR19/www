@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>LB Hope UI | Dashboard</title>
+      <title>WEB 2023</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="./assets/images/favicon.ico" />
@@ -324,7 +324,7 @@
                         <div class="caption ms-3 d-none d-md-block ">
                             <h6 class="mb-0 caption-title"><?php echo $user->nombre?></h6>
                             <p class="mb-0 caption-sub-title"></p>
-                        </div>|
+                        </div>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                        <!-- <li><a class="dropdown-item" href="../dashboard/app/user-profile.html">Profile</a></li>

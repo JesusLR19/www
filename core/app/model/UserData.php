@@ -37,8 +37,13 @@ class UserData extends Extra{
 		$sql = "update user set nombre=\"$this->nombre\",apellido=\"$this->apellido\",username=\"$this->username\",email=\"$this->email\",kind=$this->kind,status=$this->status where id=$this->id";
 		Executor::doit($sql);
 	}
+	public function updatePass(){
+		$sql = "update user set password=\"$this->password\" where id=$this->id";
+		Executor::doit($sql);
+	}
+	
 	public function updateOne($k,$v){
-		$sql = "update user set $k=\"$v\" where id=$this->id";
+		$sql = "update user set $k=\"$v\" where id=".$this->id;
 		Executor::doit($sql);
 	}
 }
