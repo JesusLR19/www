@@ -6,47 +6,45 @@
 
 
         ?>
-
+<!-- ERROR SOLUCIONADO, NO HABIA "name=''" en los inputs-->
 <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h1>Editar usuario</h1>
                     <form class="form-horizontal" method="post"action="./?action=users&opt=update" role="form">
-                    <input type="hidden" name="user_id" value="<?php echo $user->id; ?>">
+                        <input type="hidden" name="user_id" value="<?php echo $user->id; ?>">
                         <div class="form-group">
                             <label for="inputEmail1" class="col-lg-2 control-label">Nombre</label>
                             <div class="col-md-6">
-                            <input type="text"  class="form-control" value ="<?php echo $user->nombre; ?>">
+                            <input type="text" name="nombre" class="form-control" value ="<?php echo $user->nombre; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail1" class="col-lg-2 control-label">Apellido</label>
                             <div class="col-md-6">
-                            <input type="text"  class="form-control" value ="<?php echo $user->apellido; ?>">
+                            <input type="text" name="apellido" class="form-control" value ="<?php echo $user->apellido; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputUsername" class="col-lg-2 control-label">Username</label>
                             <div class="col-md-6">
-                            <input type="text" class="form-control" value ="<?php echo $user->username; ?>">
+                            <input type="text" name="username" class="form-control" value ="<?php echo $user->username; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail1" class="col-lg-2 control-label">Contraseña</label>
                             <div class="col-md-6">
-                            <input type="password" class="form-control"  value ="">
+                            <input type="password" name="password" class="form-control"  value ="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
                             <div class="col-md-6">
-                            <input type="text" class="form-control" value ="<?php echo $user->email; ?>">
+                            <input type="text" name="email" class="form-control" value ="<?php echo $user->email; ?>">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Editar usuario</button>
-                            
                         </div>
                     </form>
                 </div>

@@ -1,4 +1,4 @@
-drop database webClass;
+drop database if exists webClass;
 create database webClass;
 	use webClass;
 

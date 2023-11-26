@@ -2,7 +2,7 @@
 
 if (!isset($_SESSION['user_id'])) 
 	Core::redir("./");
- $user = UserData::getByID($_SESSION['user_id']);
+$user = UserData::getByID($_SESSION['user_id']);
 
 ?>
 <div class="container">

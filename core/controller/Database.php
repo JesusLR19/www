@@ -4,7 +4,7 @@ class Database {
 	public static $con;
 
 	function __construct(){
-		$this->user="root";$this->pass="12345";$this->host="localhost";$this->ddbb="webclass";
+		$this->user="root";$this->pass="";$this->host="localhost";$this->ddbb="webclass";
 	}
 
 	function connect(){

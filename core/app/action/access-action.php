@@ -11,9 +11,6 @@ if(isset($_GET["opt"]) && $_GET["opt"] == "login"){
 		$val_pass = htmlentities($_POST['password']);
 		$val_pass = sha1(md5($val_pass));
 
-		//sha1(md5($val_pass));
-
-
 		$base = new Database();
 		$con = $base->connect();
 
@@ -35,9 +32,6 @@ if(isset($_GET["opt"]) && $_GET["opt"] == "login"){
 			$_SESSION['user_id'] = $userid;
 
 			print "Cargando ... $username";
-			/*echo "<br><br>Hola, $username";
-			echo "<br><br>";
-			*/
 			
 			Core::addToastr("info","Bienvenido $username");
 			Core::redir("./?view=home");
@@ -47,7 +41,8 @@ if(isset($_GET["opt"]) && $_GET["opt"] == "login"){
 
 
 	}else{
-		Core::redir("./?view=home");
+		
+		Core::redir("./");
 
 	}
 
