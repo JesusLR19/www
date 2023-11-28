@@ -34,7 +34,13 @@ if(isset($_GET["opt"]) && $_GET["opt"] == "all"){
 					<td><?php echo $row->apellido; ?></td>
             	    <td><?php echo $row->username; ?></td>
             	    <td><?php echo $row->email; ?></td>
-					<td><a href="./?view=uedit&opt=update&id=<?php echo $row->id; ?>" class="btn btn-warning">Editar</a></td>
+					<td><a href="./?view=uedit&opt=update&id=<?php echo $row->id; ?>" class="btn btn-warning">
+					<i class ="fa fa-pencil"></i>Editar</a></td>
+					<td>
+						<button data-id="<?php echo $row->id; ?>"
+						 data-name="<?php echo $row->nombre; ?>" 
+						 class="btn btn-danger deleteRow">Eliminar</button>
+					</td>
             	</tr>
             	<?php 
             	}
@@ -43,6 +49,21 @@ if(isset($_GET["opt"]) && $_GET["opt"] == "all"){
             </tbody>
         </table>
     </div>
+
+<script type ="text/javascript">
+	$(document).ready(function(){
+		$('.deleteRow').click(function(){
+			var id = $(this).attr('id');
+			var name = $(this).attr('name');
+			r = confirm("Seguro que desea eliminar el usuario: "+name+"?");
+
+			if(r == true){
+				window.location = "./?action=users&opt=del&id="+id;
+			}
+		});
+
+	});
+
 
 <?php
 }
