@@ -331,7 +331,7 @@
                         <li><a class="dropdown-item" href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
                     -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="./?action=access&opt=logout">Perfil</a></li>
+                        <li><a class ="dropdown-item" a href="./?view=perfil&opt=perfil">Perfil</a></li>
                         <li><a class="dropdown-item" href="./?action=access&opt=logout">Cerrar Sesion</a></li>
                       </ul>
                     </li>
